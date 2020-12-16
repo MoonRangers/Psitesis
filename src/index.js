@@ -4,15 +4,21 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import theme from './theme.jsx'
-import {ThemeProvider, createMuiTheme} from '@material-ui/core';
+import { ThemeProvider } from '@material-ui/core';
+import { BrowserRouter } from 'react-router-dom';
+
+
 
 ReactDOM.render(
   <React.StrictMode>
-    
+
+    <BrowserRouter>
       <ThemeProvider theme={theme}>
         <App />
       </ThemeProvider>
-    
+    </BrowserRouter>
+
+
   </React.StrictMode>,
   document.getElementById('root')
 );
