@@ -31,6 +31,20 @@ const theme = createMuiTheme({
         },
       },
       
+      MuiList:{
+        root:{
+          color:"#fcfcff",
+        },
+      },
+
+
+      MuiListItemIcon:{
+        root:{
+          color: "#fcfcff"
+        }
+      },
+      
+
       MuiTypography: {
         colorTextSecondary: {
           color: '#93827f',

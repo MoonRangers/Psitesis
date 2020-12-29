@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import {Card, Grid, Typography, Box, CardMedia, CardActionArea, useMediaQuery, Tooltip, Hidden  } from '@material-ui/core/';
+import {Card, Grid, Typography, Box, CardMedia, CardActionArea, Tooltip, Hidden  } from '@material-ui/core/';
 import { makeStyles } from '@material-ui/core/styles';
 import guia from '../../images/guiatesis.jpg'
 import nosotros from '../../images/sobrenosotros.jpg'
@@ -47,7 +47,7 @@ function Home( props ){
     
     return(
         <Box display="flex" justifyContent="center" padding="32px" height="89%" >
-            <Hidden mdDown>
+            <Hidden only="xs">
                 <Grid container spacing={5} xs={12} >
                     <Grid item xs={6}>
                         <Tooltip title="Guías, artículos, plantillas y todo lo que necesitas para armar tu tesis de grado">
