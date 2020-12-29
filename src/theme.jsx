@@ -10,9 +10,48 @@ const theme = createMuiTheme({
         main: '#93827f'
       }
     },
-    props: {
-      //sobreescribir propiedades default de los componentes
-    }
+    overrides: {
+
+      MuiBottomNavigation:{
+        root: {
+          width:"100%",
+          position:"fixed",
+          bottom: 0,
+          backgroundColor: "#861c55"
+        },
+      },
+
+      MuiBottomNavigationAction:{
+        root:{
+          color:"#fcfcff",
+          "&$selected": {
+            color: "#031927"
+          },
+          selected:{}
+        },
+      },
+      
+      MuiTypography: {
+        colorTextSecondary: {
+          color: '#93827f',
+        },
+        h6:{
+          lineHeight:"1.2"
+        }
+      },
+
+
+      MuiIconButton:{
+        root:{
+          color:"#fcfcff"
+        }
+      }
+    },
+
+    
+
+      
   });
+  
 
   export default theme;
