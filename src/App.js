@@ -8,7 +8,9 @@ import {Box} from '@material-ui/core'
 
 import Login from './client/components/Admin/Login'
 import Panel from './client/components/Admin/Panel'
-import Home from './client/components/Home/Home'
+import Home from './client/components/Sections/Home'
+import Tesis from './client/components/Sections/Guiadetesis'
+
 
 import BottomNav from './client/components/Navigation/BottomNavigation'
 import AppBar from './client/components/Navigation/AppBar'
@@ -39,6 +41,7 @@ function App() {
         <Route exact path='/' component={ Home }/>
         <Route exact path='/admin/login' component={ Login }/>
         <Route exact path='/admin/panel' component={ Panel }/>
+        <Route exact path='/guiadetesis' component={ Tesis }/>
       </Box>
     </Box>
     

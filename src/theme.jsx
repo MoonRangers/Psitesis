@@ -21,6 +21,12 @@ const theme = createMuiTheme({
         },
       },
 
+      MuiDivider:{
+        root:{
+          backgroundColor:"#fcfcff"
+        }
+      },
+
       MuiBottomNavigationAction:{
         root:{
           color:"#fcfcff",
@@ -31,9 +37,12 @@ const theme = createMuiTheme({
         },
       },
       
-      MuiList:{
+      MuiListItem:{
         root:{
           color:"#fcfcff",
+          '&$selected, &$selected:hover': {
+            backgroundColor: "#031927",
+          },
         },
       },
 
@@ -61,6 +70,7 @@ const theme = createMuiTheme({
         }
       }
     },
+
 
     
 
