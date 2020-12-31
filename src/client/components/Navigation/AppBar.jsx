@@ -43,20 +43,7 @@ function NavBar() {
     }));
 
     const classes = useStyles();
-
-     const [selectedIndex, setSelectedIndex] = React.useState(0);
-
-    const handleListItemClick = (event, index) => {
-        setSelectedIndex(index);
-    }; 
-
-    /* const [categoryURL, setCategoryURL] = React.useState({categoryURL: ''}) */
-
-/*     let location = useLocation();
-
-
-    console.log('location: ', location.pathname) */
-    
+    const location = useLocation();
 
     return (
         <div className={classes.root}>
@@ -84,8 +71,7 @@ function NavBar() {
                             button 
                             key='Home' 
                             component={Link} to="/" 
-                            selected={selectedIndex === 0}
-                            onClick={(event) => handleListItemClick(event, 0)}
+                            selected={'/' === location.pathname}
                             >
                                 <ListItemIcon> <Home /> </ListItemIcon>
                                 <ListItemText primary='Home'></ListItemText>
@@ -94,8 +80,7 @@ function NavBar() {
                             button 
                             key='Guía de tesis'
                             component={Link} to="/guiadetesis"
-                            selected={selectedIndex === 1}
-                            onClick={(event) => handleListItemClick(event, 1)}
+                            selected={'/guiadetesis' === location.pathname}
                             >
                                 <ListItemIcon> <Book /> </ListItemIcon>
                                 <ListItemText primary='Guía de tesis'></ListItemText>
@@ -104,8 +89,7 @@ function NavBar() {
                             button 
                             key='Conversación'
                             component={Link} to="/conversacion"
-                            selected={selectedIndex === 2}
-                            onClick={(event) => handleListItemClick(event, 2)}
+                            selected={'/conversacion' === location.pathname}
                             >
                                 <ListItemIcon> <Forum /> </ListItemIcon>
                                 <ListItemText primary='Conversación'></ListItemText>
@@ -114,8 +98,7 @@ function NavBar() {
                             button 
                             key='Sobre Nosotrxs'
                             component={Link} to="/sobrenosotrxs"
-                            selected={selectedIndex === 3}
-                            onClick={(event) => handleListItemClick(event, 3)}
+                            selected={"/sobrenosotrxs" === location.pathname}
                             >
                                 <ListItemIcon> <Group /> </ListItemIcon>
                                 <ListItemText primary='Sobre Nosotrxs'></ListItemText>
