@@ -21,8 +21,9 @@ function NavBar() {
 
         title: {
             flexGrow: 1,
-            textAlign: 'center',
+            marginLeft: "2%",
             color: '#fcfcff',
+            
         },
 
         drawerPaper: {
@@ -49,7 +50,7 @@ function NavBar() {
         <div className={classes.root}>
             <AppBar position="relative" className={classes.appBar}>
                 <Toolbar >
-                    <Typography variant="h4" className={classes.title}>
+                    <Typography variant="h3" className={classes.title}>
                         PsiTesis
                 </Typography>
                 </Toolbar>
