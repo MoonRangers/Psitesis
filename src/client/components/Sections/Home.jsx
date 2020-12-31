@@ -12,7 +12,7 @@ function Home(props) {
     return (
         <Box display="flex" justifyContent="center" padding="32px" height="89%" >
             <Hidden only="xs">
-                <Grid container spacing={5} xs={12} >
+                <Grid container spacing={5} >
                     <Grid item xs={6}>
                         <SectionCard  >
                             <CardActionArea>
@@ -26,7 +26,7 @@ function Home(props) {
                                 <Divider variant="middle" />
 
                                 <SectionCardDescription variant="body2" color="textSecondary">
-                                    Guías, artículos, plantillas y todo lo que necesitas para armar tu tesis de grado
+                                    Guías, artículos, plantillas y todo lo que necesitas para armar tu tesis de grado.
                                 </SectionCardDescription>
                             </CardActionArea>
                         </SectionCard>
@@ -45,7 +45,7 @@ function Home(props) {
                                 <Divider variant="middle" />
 
                                 <SectionCardDescription variant="body2" color="textSecondary">
-                                    Conoce a los creadores y colaboradores que forman parte de PsiTesis. Podrás encontrar toda la información sobre los autores de los artículos
+                                    Conoce a los creadores y colaboradores que forman parte de PsiTesis. Podrás encontrar toda la información sobre los autores de los artículos.
                                 </SectionCardDescription>
                             </CardActionArea>
                         </SectionCard>

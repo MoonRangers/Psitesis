@@ -8,7 +8,7 @@ import Typography from '@material-ui/core/Typography';
 import ListItemIcon from '@material-ui/core/ListItemIcon';
 import { Group, Book, Forum, Home } from '@material-ui/icons/';
 import { Hidden, ListItemText, MenuItem } from '@material-ui/core';
-import { Link } from 'react-router-dom'
+import { Link, useLocation } from 'react-router-dom'
 
 const drawerWidth = 240;
 
@@ -44,15 +44,23 @@ function NavBar() {
 
     const classes = useStyles();
 
-    const [selectedIndex, setSelectedIndex] = React.useState(0  );
+     const [selectedIndex, setSelectedIndex] = React.useState(0);
 
     const handleListItemClick = (event, index) => {
         setSelectedIndex(index);
-    };
+    }; 
+
+    /* const [categoryURL, setCategoryURL] = React.useState({categoryURL: ''}) */
+
+/*     let location = useLocation();
+
+
+    console.log('location: ', location.pathname) */
+    
 
     return (
         <div className={classes.root}>
-            <AppBar position="top" className={classes.appBar}>
+            <AppBar position="relative" className={classes.appBar}>
                 <Toolbar >
                     <Typography variant="h4" className={classes.title}>
                         PsiTesis

@@ -1,7 +1,6 @@
 import './App.css';
 import '@material-ui/core'
 import { makeStyles } from '@material-ui/core/styles';
-import theme from './theme'
 
 import { Route } from 'react-router-dom';
 import {Box} from '@material-ui/core'
@@ -32,12 +31,12 @@ function App() {
 
   return (
     
-    <Box fluid className="app" >
+    <Box className="app" >
       
       <AppBar/>
       <BottomNav/>
       
-      <Box fluid className={classes.content} >
+      <Box className={classes.content} >
         <Route exact path='/' component={ Home }/>
         <Route exact path='/admin/login' component={ Login }/>
         <Route exact path='/admin/panel' component={ Panel }/>
