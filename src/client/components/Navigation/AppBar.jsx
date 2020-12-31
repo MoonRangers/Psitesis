@@ -30,9 +30,9 @@ function NavBar() {
             width: drawerWidth,
             backgroundColor: "#861c55"
         },
-        drawerContainer: {
+/*         drawerContainer: {
             overflow: 'auto',
-        },
+        }, */
         content: {
             flexGrow: 1,
             padding: theme.spacing(3),
@@ -48,13 +48,14 @@ function NavBar() {
 
     return (
         <div className={classes.root}>
-            <AppBar position="relative" className={classes.appBar}>
+            <AppBar position="fixed" className={classes.appBar}>
                 <Toolbar >
                     <Typography variant="h3" className={classes.title}>
                         PsiTesis
                 </Typography>
                 </Toolbar>
             </AppBar>
+            <Toolbar/>
             <Hidden only="xs">
                 <Drawer
                     variant="permanent"
