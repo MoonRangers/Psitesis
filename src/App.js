@@ -22,7 +22,10 @@ function App() {
       [theme.breakpoints.up("md")]:{
          marginLeft:"240px" 
         
-      }
+      },
+      padding:"32px",
+      display: "flex"
+
     }
   }))
 
