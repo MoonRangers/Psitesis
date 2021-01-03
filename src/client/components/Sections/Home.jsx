@@ -8,8 +8,8 @@ import categories from './Categories'
 function Home(props) {
     const useStyles = makeStyles(theme => ({
         welcomeDescription:{
-            width: '440px',
-            minHeight:'192px'
+            width: '100%',
+            minHeight:'80px'
             
         }
     }));
@@ -44,7 +44,13 @@ function Home(props) {
                             </Box>
                         </Paper>
                     </Grid>
+
             <Hidden only="xs">
+                    <Grid container item xs={12} >
+                        <Typography variant="h4"color="primary">
+                            Explorá las categorias
+                        </Typography>
+                    </Grid>
                     {categories.map((category) => (
 
                         <Grid item xs={6}>

@@ -12,29 +12,39 @@ const theme = createMuiTheme({
     },
     overrides: {
 
-      MuiBottomNavigation:{
-        root: {
-          width:"100%",
-          position:"fixed",
-          bottom: 0,
-          backgroundColor: "#861c55"
-        },
-      },
-
       MuiDivider:{
         root:{
           backgroundColor:"#fcfcff"
         }
       },
 
+      MuiBottomNavigation:{
+        root: {
+          width:"100%",
+          position:"fixed",
+          bottom: 0,
+          backgroundColor: "#861c55",
+        },
+      },
+
+
       MuiBottomNavigationAction:{
         root:{
+          padding:"4px",
           color:"#fcfcff",
           "&$selected": {
-            color: "#031927"
+            color: "#031927",
+            padding: "0px"
           },
-          selected:{}
         },
+
+        label:{
+          paddingTop:"4px",
+          fontSize: "0.84rem",
+          "&$selected":{
+            fontSize:"0.84rem"
+          }
+        }
       },
       
       MuiListItem:{
@@ -71,10 +81,6 @@ const theme = createMuiTheme({
       }
     },
 
-
-    
-
-      
   });
   
 

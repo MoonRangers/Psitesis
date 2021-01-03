@@ -30,9 +30,9 @@ function NavBar() {
             width: drawerWidth,
             backgroundColor: "#861c55"
         },
-/*         drawerContainer: {
+         drawerContainer: {
             overflow: 'auto',
-        }, */
+        },
         content: {
             flexGrow: 1,
             padding: theme.spacing(3),
@@ -41,6 +41,10 @@ function NavBar() {
         appBar: {
             zIndex: theme.zIndex.drawer + 1,
         },
+
+        list: {
+            paddingTop: "0px"
+        }
     }));
 
     const classes = useStyles();
@@ -68,7 +72,7 @@ function NavBar() {
                 >
                     <Toolbar />
                     <div className={classes.drawerContainer}>
-                        <List >
+                        <List className={classes.list}>
                             <MenuItem 
                             button 
                             key='Home' 
