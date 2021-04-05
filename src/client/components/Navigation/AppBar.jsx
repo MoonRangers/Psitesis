@@ -54,7 +54,7 @@ function NavBar() {
         <div className={classes.root}>
             <AppBar position="fixed" className={classes.appBar}>
                 <Toolbar >
-                    <Typography variant="h3" className={classes.title}>
+                    <Typography variant="h5" className={classes.title}>
                         PsiTesis
                 </Typography>
                 </Toolbar>
