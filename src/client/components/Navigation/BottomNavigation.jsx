@@ -10,7 +10,6 @@ export default function BottomNav() {
   return (
     <Hidden mdUp>
         <BottomNavigation
-        showLabels
         value={location.pathname}
         >
           

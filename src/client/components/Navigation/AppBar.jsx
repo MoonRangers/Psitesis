@@ -23,14 +23,14 @@ function NavBar() {
             flexGrow: 1,
             marginLeft: "2%",
             color: '#fcfcff',
-            
+
         },
 
         drawerPaper: {
             width: drawerWidth,
             backgroundColor: "#861c55"
         },
-         drawerContainer: {
+        drawerContainer: {
             overflow: 'auto',
         },
         content: {
@@ -59,7 +59,7 @@ function NavBar() {
                 </Typography>
                 </Toolbar>
             </AppBar>
-            <Toolbar/>
+            <Toolbar />
             <Hidden only="xs">
                 <Drawer
                     variant="permanent"
@@ -73,38 +73,38 @@ function NavBar() {
                     <Toolbar />
                     <div className={classes.drawerContainer}>
                         <List className={classes.list}>
-                            <MenuItem 
-                            button 
-                            key='Home' 
-                            component={Link} to="/" 
-                            selected={'/' === location.pathname}
+                            <MenuItem
+                                button
+                                key='Home'
+                                component={Link} to="/"
+                                selected={'/' === location.pathname}
                             >
                                 <ListItemIcon> <Home /> </ListItemIcon>
                                 <ListItemText primary='Home'></ListItemText>
                             </MenuItem>
-                            <MenuItem 
-                            button 
-                            key='Guía de tesis'
-                            component={Link} to="/guiadetesis"
-                            selected={'/guiadetesis' === location.pathname}
+                            <MenuItem
+                                button
+                                key='Guía de tesis'
+                                component={Link} to="/guiadetesis"
+                                selected={'/guiadetesis' === location.pathname}
                             >
                                 <ListItemIcon> <Book /> </ListItemIcon>
                                 <ListItemText primary='Guía de tesis'></ListItemText>
                             </MenuItem>
-                            <MenuItem 
-                            button 
-                            key='Conversación'
-                            component={Link} to="/conversacion"
-                            selected={'/conversacion' === location.pathname}
+                            <MenuItem
+                                button
+                                key='Conversación'
+                                component={Link} to="/conversacion"
+                                selected={'/conversacion' === location.pathname}
                             >
                                 <ListItemIcon> <Forum /> </ListItemIcon>
                                 <ListItemText primary='Conversación'></ListItemText>
                             </MenuItem>
-                            <MenuItem 
-                            button 
-                            key='Sobre Nosotrxs'
-                            component={Link} to="/sobrenosotrxs"
-                            selected={"/sobrenosotrxs" === location.pathname}
+                            <MenuItem
+                                button
+                                key='Sobre Nosotrxs'
+                                component={Link} to="/sobrenosotrxs"
+                                selected={"/sobrenosotrxs" === location.pathname}
                             >
                                 <ListItemIcon> <Group /> </ListItemIcon>
                                 <ListItemText primary='Sobre Nosotrxs'></ListItemText>
