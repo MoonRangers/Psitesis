@@ -60,7 +60,7 @@ function NavBar() {
                 </Toolbar>
             </AppBar>
             <Toolbar />
-            <Hidden only="xs">
+            <Hidden smDown>
                 <Drawer
                     variant="permanent"
                     classes=

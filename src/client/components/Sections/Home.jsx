@@ -43,7 +43,7 @@ function Home(props) {
                 </Paper>
             </Grid>
 
-            <Hidden only="xs">
+            <Hidden smDown>
                 <Grid container item xs={12} >
                     <Typography variant="h4" color="primary">
                         Explorá las categorias
