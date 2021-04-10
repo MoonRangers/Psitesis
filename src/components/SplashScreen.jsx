@@ -36,12 +36,12 @@ const SplashScreen = (props) => {
 
     setTimeout(() => {
       history.push('/app')
-    }, 5000)
+    }, 2000)
   }, [])
 
   return (
     <motion.div
-      custom={5} animate={controls}
+      custom={2} animate={controls}
       className={classes.root}
     >
       <img src={Logo} alt="ups" />
