@@ -1,13 +1,28 @@
 import { TextField, Button, Grid, Box } from '@material-ui/core/';
+import { makeStyles } from "@material-ui/core";
 
+const useStyles = makeStyles((theme) => ({
+    root: {
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
+        height: '89%',
+    },
+    gridContainer: {
+        justify: 'center',
+        alignItems: "center",
+        margin: theme.spacing(2),
+        flexDirection: "column"
+    }
+}))
 
 function Login() {
+    const classes = useStyles();
 
-  return (
+    return (
 
-        <Box display="flex" justifyContent="center" alignItems="center" height="89%"  >
-        <Grid container xs={6} spacing={2} >
-            <Grid item container justify="center" alignItems="center" spacing={2} direction="column" >
+        <Box className={classes.root} >
+            <Grid item container className={classes.gridContainer} xs={6} >
                 <Grid item>
                     <TextField variant="outlined" label="Usuario" ></TextField>
                 </Grid>
@@ -23,10 +38,9 @@ function Login() {
                     <Button variant="contained" color="secundary">Volver</Button>
                 </Grid>
             </Grid>
-        </Grid>
-    </Box>
+        </Box>
 
-  )
+    )
 }
 
 export default Login;
