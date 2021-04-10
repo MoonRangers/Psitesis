@@ -1,5 +1,5 @@
 import { TextField, Button, Grid, Box } from '@material-ui/core/';
-import { makeStyles } from "@material-ui/core";
+import { makeStyles } from "@material-ui/core/styles";
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -11,7 +11,6 @@ const useStyles = makeStyles((theme) => ({
     gridContainer: {
         justify: 'center',
         alignItems: "center",
-        margin: theme.spacing(2),
         flexDirection: "column"
     }
 }))
@@ -22,7 +21,7 @@ function Login() {
     return (
 
         <Box className={classes.root} >
-            <Grid item container className={classes.gridContainer} xs={6} >
+            <Grid item container className={classes.gridContainer} xs={6} spacing={2} >
                 <Grid item>
                     <TextField variant="outlined" label="Usuario" ></TextField>
                 </Grid>

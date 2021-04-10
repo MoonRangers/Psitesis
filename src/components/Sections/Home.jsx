@@ -1,23 +1,25 @@
 
 import { Grid, Box, Divider, Hidden, CardActionArea, Typography, Paper } from '@material-ui/core/';
 import { makeStyles } from "@material-ui/core/styles";
-import { SectionCard, SectionCardMedia, SectionCardTitle, SectionCardDescription } from '../StyledComponents/SectionCard'
+import { SectionCard, SectionCardMedia, SectionCardTitle, SectionCardDescription } from '../../components/StyledComponents/SectionCard'
 import { Link } from 'react-router-dom'
 import categories from './Categories'
 
+const useStyles = makeStyles((theme) => ({
+    root: {
+        justifyContent: "center",
+    },
+    welcomeDescriptionPaper: {
+        width: '100%',
+        minHeight: '80px'
+    },
+}));
+
 function Home(props) {
-    const useStyles = makeStyles(theme => ({
-        welcomeDescriptionPaper: {
-            width: '100%',
-            minHeight: '80px'
-
-        }
-    }));
-
     const classes = useStyles();
 
     return (
-        <Grid container spacing={5} justifyContent="center">
+        <Grid container spacing={5} className={classes.root}>
             <Grid container item xs={12} >
                 <Typography variant="h4" color="primary">
                     Bienvenidos
