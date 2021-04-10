@@ -76,8 +76,8 @@ function NavBar() {
                             <MenuItem
                                 button
                                 key='Home'
-                                component={Link} to="/"
-                                selected={'/' === location.pathname}
+                                component={Link} to="/app"
+                                selected={'/app' === location.pathname}
                             >
                                 <ListItemIcon> <Home /> </ListItemIcon>
                                 <ListItemText primary='Home'></ListItemText>
@@ -85,8 +85,8 @@ function NavBar() {
                             <MenuItem
                                 button
                                 key='Guía de tesis'
-                                component={Link} to="/guiadetesis"
-                                selected={'/guiadetesis' === location.pathname}
+                                component={Link} to="/app/guiadetesis"
+                                selected={'/app/guiadetesis' === location.pathname}
                             >
                                 <ListItemIcon> <Book /> </ListItemIcon>
                                 <ListItemText primary='Guía de tesis'></ListItemText>
@@ -94,8 +94,8 @@ function NavBar() {
                             <MenuItem
                                 button
                                 key='Conversación'
-                                component={Link} to="/conversacion"
-                                selected={'/conversacion' === location.pathname}
+                                component={Link} to="/app/conversacion"
+                                selected={'/app/conversacion' === location.pathname}
                             >
                                 <ListItemIcon> <Forum /> </ListItemIcon>
                                 <ListItemText primary='Conversación'></ListItemText>
@@ -103,8 +103,8 @@ function NavBar() {
                             <MenuItem
                                 button
                                 key='Sobre Nosotrxs'
-                                component={Link} to="/sobrenosotrxs"
-                                selected={"/sobrenosotrxs" === location.pathname}
+                                component={Link} to="/app/sobrenosotrxs"
+                                selected={"/app/sobrenosotrxs" === location.pathname}
                             >
                                 <ListItemIcon> <Group /> </ListItemIcon>
                                 <ListItemText primary='Sobre Nosotrxs'></ListItemText>
