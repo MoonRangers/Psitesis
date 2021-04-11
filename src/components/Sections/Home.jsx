@@ -1,7 +1,7 @@
 
 import { Grid, Box, Divider, Hidden, CardActionArea, Typography, Paper } from '@material-ui/core/';
 import { makeStyles } from "@material-ui/core/styles";
-import { SectionCard, SectionCardMedia, SectionCardTitle, SectionCardDescription } from '../StyledComponents/SectionCard'
+import { SectionCard, SectionCardMedia, SectionCardTitle, SectionCardDescription } from '../../components/StyledComponents/SectionCard'
 import { Link } from 'react-router-dom'
 import categories from './Categories'
 import { motion } from 'framer-motion';
@@ -15,6 +15,7 @@ function Home(props) {
         }
     }));
 
+function Home(props) {
     const classes = useStyles();
     return (
         <motion.div

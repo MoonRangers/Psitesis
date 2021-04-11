@@ -1,5 +1,19 @@
 import { TextField, Button, Grid, Box } from '@material-ui/core/';
+import { makeStyles } from "@material-ui/core/styles";
 
+const useStyles = makeStyles((theme) => ({
+    root: {
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
+        height: '89%',
+    },
+    gridContainer: {
+        justify: 'center',
+        alignItems: "center",
+        flexDirection: "column"
+    }
+}))
 
 function Login(props) {
     const { styles } = props;
