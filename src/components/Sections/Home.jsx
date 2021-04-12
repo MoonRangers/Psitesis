@@ -6,14 +6,18 @@ import { Link } from 'react-router-dom'
 import categories from './Categories'
 import { motion } from 'framer-motion';
 
+const useStyles = makeStyles((theme) => ({
+    welcomeDescriptionPaper: {
+        width: '100%',
+        minHeight: '80px'
+    },
+    root: {
+        justifyContent: "center",
+    },
+}));
+
 function Home(props) {
     const { styles } = props;
-    const useStyles = makeStyles(theme => ({
-        welcomeDescriptionPaper: {
-            width: '100%',
-            minHeight: '80px'
-        }
-    }));
 
     const classes = useStyles();
     return (
@@ -24,27 +28,23 @@ function Home(props) {
             exit={{ opacity: 0 }}
             className={styles}
         >
-            <Grid container spacing={5} justifyContent="center">
+            <Grid container spacing={5} className={classes.root}>
                 <Grid container item xs={12} >
                     <Typography variant="h4" color="primary">
                         Bienvenidos
-                </Typography>
+                    </Typography>
                 </Grid>
                 <Grid container item xs={12} >
                     <Paper className={classes.welcomeDescriptionPaper}>
                         <Box padding="16px" >
-                            <Typography variant="body1" gutterBottom>
-                                <Box fontWeight="fontWeightBold">
-                                    Nuestro objetivo es brindar información actualizada
-                                    y de fuentes confiables para que puedas realizar tu tesis.
-                            </Box>
+                            <Typography variant="body1" gutterBottom fontWeight="fontWeightBold">
+                                Nuestro objetivo es brindar información actualizada
+                                y de fuentes confiables para que puedas realizar tu tesis.
                             </Typography>
-                            <Typography variant="body1">
-                                <Box fontWeight="fontWeightBold">
-                                    Actualmente esta página esta en construcción. Con el pasar de los
-                                    meses vamos a sumar nuevas secciones y actualizar las que tenemos
-                                    con nuevos artículos.
-                            </Box>
+                            <Typography variant="body1" fontWeight="fontWeightBold">
+                                Actualmente esta página esta en construcción. Con el pasar de los
+                                meses vamos a sumar nuevas secciones y actualizar las que tenemos
+                                con nuevos artículos.
                             </Typography>
                         </Box>
                     </Paper>
@@ -56,9 +56,9 @@ function Home(props) {
                             Explorá las categorias
                         </Typography>
                     </Grid>
-                    {categories.map((category) => (
+                    {categories.map((category, index) => (
 
-                        <Grid item xs={6}>
+                        <Grid item xs={6} key={index}>
                             <Link to={category.url} style={{ textDecoration: 'none' }}>
                                 <SectionCard >
                                     <CardActionArea>
