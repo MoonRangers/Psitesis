@@ -35,7 +35,7 @@ const SplashScreen = (props) => {
     }))
 
     setTimeout(() => {
-      history.push('/app')
+      history.push('/onboarding-one')
     }, 2000)
     // eslint-disable-next-line
   }, [])
