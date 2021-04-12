@@ -1,8 +1,9 @@
 
-import { Grid, Box, Divider, Typography  } from '@material-ui/core/';
+import { Grid, Divider, Typography  } from '@material-ui/core/';
 import { makeStyles } from "@material-ui/core/styles";//
-//import { SectionCard, SectionCardMedia, SectionCardTitle, SectionCardDescription } from '../StyledComponents/SectionCard'
+import { StyledLink} from '../StyledComponents/Link'
 import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom'
 
 const useStyles = makeStyles((theme) => ({
     welcomeDescription: {
@@ -17,7 +18,7 @@ const useStyles = makeStyles((theme) => ({
         fontWeight:"400",
         lineHeight: "1.1875rem",
         marginBottom:"16px"
-    }
+    },
 }));
 
 function Home(props) {
@@ -40,9 +41,8 @@ function Home(props) {
                 </Grid>
                 <Grid item>
                     <Typography className={classes.bajada} >
-                        En Psitesis encontraras ARTÍCULOS escritos por expertos en la construcción de tesis.
-                        Si seguis con dudas podés escribir en el FORO, donde encontraras otros colegas que puedan ayudarte.
-                        Trabajemos juntos para hacer crecer la COMUNIDAD y ayudarnos entre todos.
+                        En Psitesis encontraras <StyledLink to="/app/guiadetesis">ARTÍCULOS</StyledLink> escritos por <StyledLink to="/app/sobrenosotrxs">COLABORADORES</StyledLink> expertos en la construcción de tesis.<br></br>
+                        Si seguis con dudas podés escribir en el <StyledLink to="/app/conversacion">FORO</StyledLink>, donde encontraras otros colegas que puedan ayudarte.
                     </Typography>
 
                     <Divider />
