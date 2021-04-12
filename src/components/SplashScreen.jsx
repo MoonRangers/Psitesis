@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react'
-import Logo from "../logo.svg";
+import { Logo } from "../constants/URL";
 import '../App.css'
 import { useHistory } from 'react-router';
 import { motion, useAnimation } from 'framer-motion';
@@ -37,6 +37,7 @@ const SplashScreen = (props) => {
     setTimeout(() => {
       history.push('/app')
     }, 2000)
+    // eslint-disable-next-line
   }, [])
 
   return (
