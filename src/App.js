@@ -13,6 +13,7 @@ import SplashScreen from "../src/components/SplashScreen";
 import BottomNav from "./components/Navigation/BottomNavigation";
 import AppBar from "./components/Navigation/AppBar";
 import OnboardingScreenOne from "./components/OnboardingScreenOne";
+import OnboardingScreenTwo from "./components/OnboardingScreenTwo";
 
 const useStyles = makeStyles((theme) => ({
   content: {
@@ -36,6 +37,7 @@ function App() {
     <Router className="app">
       <Route exact path="/" component={SplashScreen} />
       <Route exact path="/onboarding-one" component={OnboardingScreenOne} />
+      <Route exact path="/onboarding-two" component={OnboardingScreenTwo} />
       <Route path="/app">
         <AppBar />
       </Route>
