@@ -1,5 +1,5 @@
 import { Box, Button, Typography } from "@material-ui/core"
-import { OnboardingOne } from "../constants/URL";
+import { OnboardingTwo } from "../constants/URL";
 import { makeStyles } from "@material-ui/core/styles";
 import { motion } from "framer-motion";
 import { useHistory } from "react-router";
@@ -23,6 +23,7 @@ const useStyles = makeStyles((theme) => ({
     width: '80%',
     margin: '0 auto',
     minHeight: 112,
+    height: 'fit-content',
     fontWeight: 400,
     fontSize: 24,
     textAlign: 'center',
@@ -63,7 +64,7 @@ const useStyles = makeStyles((theme) => ({
   }
 }))
 
-const OnboardingScreenOne = () => {
+const OnboardingScreenTwo = () => {
   const classes = useStyles();
   const history = useHistory()
 
@@ -75,9 +76,9 @@ const OnboardingScreenOne = () => {
       exit={{ opacity: 0 }}
       className={classes.root}
     >
-      <img src={OnboardingOne} alt="Ups" />
+      <img src={OnboardingTwo} alt="Ups" />
       <Typography className={classes.message}>
-        Encontra ARTÍCULOS escritos por expertos para ayudarte a hacer tu tesis.
+        Forma parte de nuestra comunidad interactuando con otros estudiantes en el FORO.
       </Typography>
       <Button
         className={classes.button}
@@ -86,11 +87,11 @@ const OnboardingScreenOne = () => {
         Comencemos
       </Button>
       <Box className={classes.dots}>
+        <Box className={classes.dot} onClick={() => history.push('/onboarding-one')} />
         <Box className={classes.filledDot} />
-        <Box className={classes.dot} onClick={() => history.push('/onboarding-two')} />
       </Box>
     </motion.div>
   )
 }
 
-export default OnboardingScreenOne
+export default OnboardingScreenTwo;
