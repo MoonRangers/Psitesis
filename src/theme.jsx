@@ -14,7 +14,7 @@ const theme = createMuiTheme({
 
       MuiDivider:{
         root:{
-          backgroundColor:"#fcfcff"
+          backgroundColor:"#212121"
         }
       },
 
@@ -68,9 +68,6 @@ const theme = createMuiTheme({
         colorTextSecondary: {
           color: '#93827f',
         },
-        h6:{
-          lineHeight:"1.2"
-        }
       },
 
 

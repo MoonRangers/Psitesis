@@ -20,7 +20,7 @@ const useStyles = makeStyles((theme) => ({
     [theme.breakpoints.up("md")]: {
       marginLeft: "240px",
     },
-    padding: "32px",
+    padding: "32px 16px 8px",
     display: "flex",
   },
 }));
