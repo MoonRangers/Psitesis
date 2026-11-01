@@ -1,18 +1,22 @@
 
-import { Grid, Box, Divider, Hidden, CardActionArea, Typography, Paper } from '@material-ui/core/';
-import { makeStyles } from "@material-ui/core/styles";
-import { SectionCard, SectionCardMedia, SectionCardTitle, SectionCardDescription } from '../StyledComponents/SectionCard'
-import { Link } from 'react-router-dom'
-import categories from './Categories'
+import { Grid, Divider, Typography  } from '@material-ui/core/';
+import { makeStyles } from "@material-ui/core/styles";//
+import { StyledLink} from '../StyledComponents/Link'
 import { motion } from 'framer-motion';
 
 const useStyles = makeStyles((theme) => ({
-    welcomeDescriptionPaper: {
-        width: '100%',
-        minHeight: '80px'
+    welcomeDescription: {
+        paddingTop:"16px",
     },
     root: {
         justifyContent: "center",
+    },
+    bajada:{
+        fontFamily: "Roboto",
+        fontSize: "1rem",
+        fontWeight:"400",
+        lineHeight: "1.1875rem",
+        marginBottom:"16px"
     },
 }));
 
@@ -28,61 +32,31 @@ function Home(props) {
             exit={{ opacity: 0 }}
             className={styles}
         >
-            <Grid container spacing={5} className={classes.root}>
-                <Grid container item xs={12} >
-                    <Typography variant="h4" color="primary">
+            <Grid container spacing={2}  >
+                <Grid item xs={12} >
+                    <Typography variant="h6">
                         Bienvenidos
+                    </Typography>     
+                </Grid>
+                <Grid item xs={12} >
+                    <Typography className={classes.bajada} >
+                        En Psitesis encontrarás <StyledLink to="/app/guiadetesis">ARTÍCULOS</StyledLink> escritos por <StyledLink to="/app/sobrenosotrxs">COLABORADORES</StyledLink> expertos en la construcción de tesis.<br></br><br></br>
+                        Si seguis con dudas podés escribir en el <StyledLink to="/app/conversacion">FORO</StyledLink>, donde encontraras otros colegas que puedan ayudarte.
                     </Typography>
-                </Grid>
-                <Grid container item xs={12} >
-                    <Paper className={classes.welcomeDescriptionPaper}>
-                        <Box padding="16px" >
-                            <Typography variant="body1" gutterBottom fontWeight="fontWeightBold">
-                                Nuestro objetivo es brindar información actualizada
-                                y de fuentes confiables para que puedas realizar tu tesis.
-                            </Typography>
-                            <Typography variant="body1" fontWeight="fontWeightBold">
-                                Actualmente esta página esta en construcción. Con el pasar de los
-                                meses vamos a sumar nuevas secciones y actualizar las que tenemos
-                                con nuevos artículos.
-                            </Typography>
-                        </Box>
-                    </Paper>
-                </Grid>
 
-                <Hidden smDown>
-                    <Grid container item xs={12} >
-                        <Typography variant="h4" color="primary">
-                            Explorá las categorias
+                    <Divider />
+                </Grid>   
+
+                <Grid container item style={{marginTop:"8px"}}>
+                    <Grid item>
+                        <Typography variant="h6">
+                            Los artículos más leidos de la página
                         </Typography>
-                    </Grid>
-                    {categories.map((category, index) => (
+                    </Grid>  
+                </Grid>
 
-                        <Grid item xs={6} key={index}>
-                            <Link to={category.url} style={{ textDecoration: 'none' }}>
-                                <SectionCard >
-                                    <CardActionArea>
-
-                                        <SectionCardMedia
-                                            image={category.image}
-                                        />
-                                        <SectionCardTitle variant="h6">
-                                            {category.title}
-                                        </SectionCardTitle>
-
-                                        <Divider variant="middle" />
-
-                                        <SectionCardDescription variant="body2" color="textSecondary">
-                                            {category.description}
-                                        </SectionCardDescription>
-                                    </CardActionArea>
-                                </SectionCard>
-                            </Link>
-                        </Grid>
-                    ))}
-
-                </Hidden>
             </Grid>
+
         </motion.div>
     )
 }
